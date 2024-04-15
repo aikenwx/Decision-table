@@ -1,0 +1,4 @@
+input1;input2;*;status
+<10;>=1000;*;"OUTPUT1"
+<12;>=1;*;"OUTPUT2"
+<10;>=0;*;"OUTPUT3"
