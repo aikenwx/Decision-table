@@ -57,11 +57,10 @@ class EvaluatorFactory:
         
         return first_evaluator
         
-    def create_from_dataframe(self, dataframe: DataFrame) -> AbstractEvaluator:
+    def create_from_arr_of_dict(self, arr_of_dict) -> AbstractEvaluator:
         root_evaluator = RootEvaluator()
 
-        for index, row in dataframe.iterrows():
-            dic = row.to_dict()
+        for index, dic in enumerate(arr_of_dict):
 
             evaluator = self.create_from_row(dic, index)
             root_evaluator.add_evaluator(evaluator)
